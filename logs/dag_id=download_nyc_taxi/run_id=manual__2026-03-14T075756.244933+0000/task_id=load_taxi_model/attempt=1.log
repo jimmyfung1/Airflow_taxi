@@ -1,0 +1,17 @@
+{"timestamp":"2026-03-14T07:58:27.498473Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-14T07:58:27.501025Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/download_taxi_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-14T07:58:27.514237Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/download_taxi_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T07:58:27.539725Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:27.540291Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:27.540741Z","level":"info","event":"Current task name:load_taxi_model","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:27.541170Z","level":"info","event":"Dag name:download_nyc_taxi","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:27.570053Z","level":"warning","event":"Using Variable.get from `airflow.models` is deprecated.Please use `get` on Variable from sdk(`airflow.sdk.Variable`) instead","category":"DeprecationWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py","lineno":151,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T07:58:27.594668Z","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow._shared.secrets_masker.secrets_masker","filename":"secrets_masker.py","lineno":546}
+{"timestamp":"2026-03-14T07:58:27.627772Z","level":"info","event":"Connected to MySQL","logger":"root","filename":"download_taxi_dag.py","lineno":178}
+{"timestamp":"2026-03-14T07:58:28.170281Z","level":"info","event":"dim_time rows: 79","logger":"root","filename":"download_taxi_dag.py","lineno":239}
+{"timestamp":"2026-03-14T07:58:28.170471Z","level":"info","event":"dim_payment rows: 4","logger":"root","filename":"download_taxi_dag.py","lineno":240}
+{"timestamp":"2026-03-14T07:58:28.170553Z","level":"info","event":"fact_trips rows: 980","logger":"root","filename":"download_taxi_dag.py","lineno":241}
+{"timestamp":"2026-03-14T07:58:28.171310Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2026-03-14T07:58:28.189729Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:28.190323Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:28.190721Z","level":"info","event":"Task operator:<Task(PythonOperator): load_taxi_model>","logger":"task.stdout"}

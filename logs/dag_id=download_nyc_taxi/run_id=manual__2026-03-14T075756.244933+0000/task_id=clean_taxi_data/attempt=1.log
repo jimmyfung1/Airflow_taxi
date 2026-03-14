@@ -1,0 +1,14 @@
+{"timestamp":"2026-03-14T07:58:25.287089Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-14T07:58:25.288269Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/download_taxi_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-14T07:58:25.297996Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/download_taxi_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T07:58:25.314650Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.315391Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.316025Z","level":"info","event":"Current task name:clean_taxi_data","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.316349Z","level":"info","event":"Dag name:download_nyc_taxi","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.327852Z","level":"info","event":"Loading file /tmp/nyc_taxi_raw.csv","logger":"root","filename":"download_taxi_dag.py","lineno":73}
+{"timestamp":"2026-03-14T07:58:25.342075Z","level":"info","event":"Original rows: 1000","logger":"root","filename":"download_taxi_dag.py","lineno":78}
+{"timestamp":"2026-03-14T07:58:25.354906Z","level":"info","event":"Saved cleaned file to /tmp/nyc_taxi_clean.csv","logger":"root","filename":"download_taxi_dag.py","lineno":93}
+{"timestamp":"2026-03-14T07:58:25.366728Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2026-03-14T07:58:25.380821Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.381830Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:58:25.382596Z","level":"info","event":"Task operator:<Task(PythonOperator): clean_taxi_data>","logger":"task.stdout"}

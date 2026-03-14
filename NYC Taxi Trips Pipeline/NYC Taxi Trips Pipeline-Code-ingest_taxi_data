@@ -1,0 +1,33 @@
+import requests
+import pandas as pd
+import logging
+from airflow.exceptions import AirflowException
+
+def ingest_taxi_data(**context):
+    # NYC Yellow Taxi Trip Records - public dataset
+    url = "https://data.cityofnewyork.us/api/views/4c9m-wp7t/rows.csv"
+    output_path = "/tmp/nyc_taxi_raw.csv"
+    
+    for attempt in range(3):
+        try:
+            logging.info(f"Attempt {attempt+1}: Downloading NYC taxi data...")
+            response = requests.get(url, stream=True, timeout=60)
+            response.raise_for_status()
+            
+            with open(output_path, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            break
+        except requests.exceptions.RequestException as e:
+            if attempt == 2:
+                raise AirflowException(f"Download failed after 3 attempts: {e}")
+    
+    df = pd.read_csv(output_path, nrows=100)
+    full_count = sum(1 for _ in open(output_path)) - 1
+    
+    if full_count < 1000:
+        raise AirflowException(f"Validation failed: only {full_count} rows")
+    
+    logging.info(f"✓ Downloaded {full_count:,} rows to {output_path}")
+    context["ti"].xcom_push(key="raw_path", value=output_path)
+    return output_path

@@ -3082,3 +3082,198 @@ Traceback (most recent call last):
 NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
 [2026-03-14T10:37:14.988+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
 [2026-03-14T10:37:15.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.342 seconds
+[2026-03-14T10:37:45.172+0000] {processor.py:161} INFO - Started process (PID=1329) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:37:45.173+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:37:45.175+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:37:45.174+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:37:45.505+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:37:45.494+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:37:45.509+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:37:45.526+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.359 seconds
+[2026-03-14T10:38:15.619+0000] {processor.py:161} INFO - Started process (PID=1385) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:15.621+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:38:15.623+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:38:15.622+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:15.909+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:38:15.900+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:38:15.914+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:15.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.326 seconds
+[2026-03-14T10:38:46.228+0000] {processor.py:161} INFO - Started process (PID=1439) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:46.230+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:38:46.231+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:38:46.231+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:46.502+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:38:46.495+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:38:46.505+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:38:46.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.300 seconds
+[2026-03-14T10:39:16.776+0000] {processor.py:161} INFO - Started process (PID=1495) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:16.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:39:16.780+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:39:16.779+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:17.119+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:39:17.111+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:39:17.122+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:17.141+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.371 seconds
+[2026-03-14T10:39:47.204+0000] {processor.py:161} INFO - Started process (PID=1550) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:47.205+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:39:47.208+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:39:47.208+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:47.538+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:39:47.528+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:39:47.544+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:39:47.572+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.376 seconds
+[2026-03-14T10:40:18.158+0000] {processor.py:161} INFO - Started process (PID=1606) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:18.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:40:18.162+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:40:18.162+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:18.489+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:40:18.481+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:40:18.494+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:18.512+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.359 seconds
+[2026-03-14T10:40:48.634+0000] {processor.py:161} INFO - Started process (PID=1660) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:48.635+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:40:48.637+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:40:48.637+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:48.947+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:40:48.940+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:40:48.951+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:40:48.971+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.342 seconds
+[2026-03-14T10:41:19.113+0000] {processor.py:161} INFO - Started process (PID=1719) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:19.114+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:41:19.116+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:41:19.116+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:19.413+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:41:19.403+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:41:19.419+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:19.442+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.335 seconds
+[2026-03-14T10:41:50.297+0000] {processor.py:161} INFO - Started process (PID=1777) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:50.298+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:41:50.300+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:41:50.300+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:50.623+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:41:50.615+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:41:50.627+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:41:50.672+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.381 seconds
+[2026-03-14T10:42:21.615+0000] {processor.py:161} INFO - Started process (PID=1834) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:21.617+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:42:21.620+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:42:21.619+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:21.928+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:42:21.920+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:42:21.933+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:21.950+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.340 seconds
+[2026-03-14T10:42:52.061+0000] {processor.py:161} INFO - Started process (PID=1893) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:52.062+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:42:52.064+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:42:52.064+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:52.364+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:42:52.357+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:42:52.368+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:42:52.384+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.330 seconds
+[2026-03-14T10:43:22.882+0000] {processor.py:161} INFO - Started process (PID=1948) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:22.883+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:43:22.885+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:43:22.885+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:23.175+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:43:23.167+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:43:23.179+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:23.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.320 seconds
+[2026-03-14T10:43:53.473+0000] {processor.py:161} INFO - Started process (PID=2005) to work on /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:53.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/taxi_ingest.py for tasks to queue
+[2026-03-14T10:43:53.481+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:43:53.480+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:53.842+0000] {logging_mixin.py:188} INFO - [2026-03-14T10:43:53.832+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/taxi_ingest.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/taxi_ingest.py", line 30, in <module>
+    python_callable=ingest_taxi_data
+                    ^^^^^^^^^^^^^^^^
+NameError: name 'ingest_taxi_data' is not defined. Did you mean: 'clean_taxi_data'?
+[2026-03-14T10:43:53.847+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/taxi_ingest.py
+[2026-03-14T10:43:53.871+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/taxi_ingest.py took 0.406 seconds

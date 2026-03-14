@@ -1,0 +1,11 @@
+You are an Apache Airflow expert. Write a Python function called ingest_taxi_data() that will be used as a PythonOperator callable in an Airflow DAG.
+
+The function should:
+1. Download the NYC Yellow Taxi Trip Records CSV from: https://data.cityofnewyork.us/api/views/4c9m-wp7t/rows.csv
+2. Use Python's requests library to stream download the file
+3. Save it locally to /tmp/nyc_taxi_raw.csv
+4. Log the number of rows downloaded using Airflow's logging
+5. Push the file path to XCom so downstream tasks can access it
+6. Handle connection errors with retry logic (3 attempts)
+
+Return only the function code with proper imports. Use pandas to do a quick row count validation (raise an error if file has less than 1000 rows).

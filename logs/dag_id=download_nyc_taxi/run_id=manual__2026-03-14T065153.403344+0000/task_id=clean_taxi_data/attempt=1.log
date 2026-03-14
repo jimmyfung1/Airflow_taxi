@@ -1,0 +1,17 @@
+{"timestamp":"2026-03-14T06:52:54.868386Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-14T06:52:54.869687Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/download_taxi_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-14T06:52:54.892552Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/download_taxi_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T06:52:54.922441Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:54.923799Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:54.924731Z","level":"info","event":"Current task name:clean_taxi_data","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:54.925464Z","level":"info","event":"Dag name:download_nyc_taxi","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:54.941404Z","level":"info","event":"Loading file /tmp/nyc_taxi_raw.csv","logger":"root","filename":"download_taxi_dag.py","lineno":65}
+{"timestamp":"2026-03-14T06:52:54.955623Z","level":"info","event":"Original rows: 1000","logger":"root","filename":"download_taxi_dag.py","lineno":70}
+{"timestamp":"2026-03-14T06:52:54.958508Z","level":"info","event":"Removed 3 rows due to fare_amount","logger":"root","filename":"download_taxi_dag.py","lineno":74}
+{"timestamp":"2026-03-14T06:52:54.959588Z","level":"info","event":"Removed 10 rows due to trip_distance","logger":"root","filename":"download_taxi_dag.py","lineno":78}
+{"timestamp":"2026-03-14T06:52:54.961483Z","level":"info","event":"Removed 0 rows due to null values","logger":"root","filename":"download_taxi_dag.py","lineno":86}
+{"timestamp":"2026-03-14T06:52:54.981307Z","level":"info","event":"Saved cleaned file to /tmp/nyc_taxi_clean.csv","logger":"root","filename":"download_taxi_dag.py","lineno":97}
+{"timestamp":"2026-03-14T06:52:55.010124Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2026-03-14T06:52:55.038953Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:55.040264Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:52:55.041294Z","level":"info","event":"Task operator:<Task(PythonOperator): clean_taxi_data>","logger":"task.stdout"}

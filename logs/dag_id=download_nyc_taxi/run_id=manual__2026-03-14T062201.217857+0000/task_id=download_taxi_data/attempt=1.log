@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-14T06:22:03.186077Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-14T06:22:03.188052Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/download_taxi_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-14T06:22:03.204601Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/download_taxi_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T06:22:03.224542Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:03.225020Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:03.225404Z","level":"info","event":"Current task name:download_taxi_data","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:03.225765Z","level":"info","event":"Dag name:download_nyc_taxi","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:34.125938Z","level":"warning","event":"Attempt 1 failed: HTTPSConnectionPool(host='data.cityofnewyork.us', port=443): Read timed out. (read timeout=30)","logger":"root","filename":"download_taxi_dag.py","lineno":45}
+{"timestamp":"2026-03-14T06:22:47.048867Z","level":"info","event":"Downloaded 1001 rows","logger":"root","filename":"download_taxi_dag.py","lineno":34}
+{"timestamp":"2026-03-14T06:22:47.064948Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2026-03-14T06:22:47.088311Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:47.090151Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-14T06:22:47.091008Z","level":"info","event":"Task operator:<Task(PythonOperator): download_taxi_data>","logger":"task.stdout"}

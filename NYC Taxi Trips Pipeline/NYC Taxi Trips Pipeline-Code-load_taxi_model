@@ -1,0 +1,42 @@
+import pandas as pd
+import logging
+from sqlalchemy import create_engine
+from airflow.models import Variable
+
+def load_taxi_model(**context):
+    transformed_path = context["ti"].xcom_pull(
+        task_ids="transform_taxi_data", key="transformed_path"
+    )
+    df = pd.read_csv(transformed_path)
+    
+    # Build MySQL connection from Airflow Variables
+    engine = create_engine(
+        f"mysql+pymysql://{Variable.get('MYSQL_USER')}:"
+        f"{Variable.get('MYSQL_PASS')}@{Variable.get('MYSQL_HOST')}/"
+        f"{Variable.get('MYSQL_DB')}"
+    )
+    
+    # Dimension: time
+    dim_time = df[["pickup_hour", "pickup_day_of_week", "is_weekend"]].drop_duplicates()
+    dim_time["time_id"] = dim_time.index
+    dim_time.to_sql("dim_time", engine, if_exists="replace", index=False)
+    logging.info(f"dim_time: {len(dim_time)} rows")
+    
+    # Dimension: payment type
+    dim_payment = df[["payment_type"]].drop_duplicates().reset_index(drop=True)
+    dim_payment["payment_id"] = dim_payment.index
+    dim_payment.to_sql("dim_payment", engine, if_exists="replace", index=False)
+    
+    # Fact table with measures
+    fact_cols = [
+        "fare_amount", "trip_distance", "trip_duration_minutes",
+        "speed_mph", "fare_per_mile", "passenger_count",
+        "pickup_hour", "payment_type"
+    ]
+    fact_trips = df[fact_cols].copy()
+    fact_trips.to_sql(
+        "fact_trips", engine,
+        if_exists="replace", index=False,
+        chunksize=1000
+    )
+    logging.info(f"✓ fact_trips loaded: {len(fact_trips):,} rows")

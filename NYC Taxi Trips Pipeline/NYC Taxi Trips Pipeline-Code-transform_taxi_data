@@ -1,0 +1,34 @@
+import pandas as pd
+import logging
+
+def transform_taxi_data(**context):
+    clean_path = context["ti"].xcom_pull(
+        task_ids="clean_taxi_data", key="clean_path"
+    )
+    df = pd.read_csv(clean_path, parse_dates=[
+        "tpep_pickup_datetime", "tpep_dropoff_datetime"
+    ])
+    
+    # Compute temporal features
+    df["trip_duration_minutes"] = (
+        df["tpep_dropoff_datetime"] - df["tpep_pickup_datetime"]
+    ).dt.total_seconds() / 60
+    
+    df["pickup_hour"] = df["tpep_pickup_datetime"].dt.hour
+    df["pickup_day_of_week"] = df["tpep_pickup_datetime"].dt.dayofweek
+    df["is_weekend"] = df["pickup_day_of_week"] >= 5
+    
+    # Derived rate metrics
+    df["speed_mph"] = df["trip_distance"] / (df["trip_duration_minutes"] / 60)
+    df["fare_per_mile"] = df["fare_amount"] / df["trip_distance"]
+    
+    # Remove unrealistic speeds and ultra-short trips
+    df = df[(df["speed_mph"] <= 80) & (df["trip_duration_minutes"] >= 1)]
+    
+    logging.info("Transform stats:")
+    logging.info(df[["trip_duration_minutes","speed_mph","fare_per_mile"]].describe())
+    
+    output_path = "/tmp/nyc_taxi_transformed.csv"
+    df.to_csv(output_path, index=False)
+    context["ti"].xcom_push(key="transformed_path", value=output_path)
+    logging.info(f"✓ Transformed {len(df):,} rows saved")

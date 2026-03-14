@@ -1,0 +1,12 @@
+You are an Apache Airflow expert. Write a Python function called load_taxi_model(**context) for a PythonOperator.
+
+The function should:
+1. Pull the transformed CSV path from XCom
+2. Load data with pandas
+3. Connect to MySQL using SQLAlchemy with credentials from Airflow Variables (MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DB)
+4. Create and populate these star-schema tables:
+- dim_time: unique hours/days/weekends lookup
+- dim_payment: payment_type dimension
+- fact_trips: grain is one row per trip with FKs to dimensions + measures (fare_amount, trip_distance, trip_duration_minutes, speed_mph, fare_per_mile, passenger_count)
+5. Use pandas to_sql with if_exists='replace' and chunked writes (chunksize=1000)
+6. Log row counts for each table after load

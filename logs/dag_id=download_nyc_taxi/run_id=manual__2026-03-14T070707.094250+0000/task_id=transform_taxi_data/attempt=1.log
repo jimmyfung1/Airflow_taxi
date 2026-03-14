@@ -1,0 +1,15 @@
+{"timestamp":"2026-03-14T07:07:48.111136Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-14T07:07:48.114399Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/download_taxi_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-14T07:07:48.181207Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/download_taxi_dag.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-14T07:07:48.210167Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.210878Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.211545Z","level":"info","event":"Current task name:transform_taxi_data","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.212143Z","level":"info","event":"Dag name:download_nyc_taxi","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.231856Z","level":"info","event":"Loading cleaned file /tmp/nyc_taxi_clean.csv","logger":"root","filename":"download_taxi_dag.py","lineno":120}
+{"timestamp":"2026-03-14T07:07:48.274756Z","level":"info","event":"Removed 7 rows due to unrealistic trips","logger":"root","filename":"download_taxi_dag.py","lineno":154}
+{"timestamp":"2026-03-14T07:07:48.299608Z","level":"info","event":"Saved transformed file to /tmp/nyc_taxi_transformed.csv","logger":"root","filename":"download_taxi_dag.py","lineno":160}
+{"timestamp":"2026-03-14T07:07:48.328162Z","level":"info","event":"\nStatistics:\n       trip_duration_minutes   speed_mph  fare_per_mile\ncount             980.000000  980.000000     980.000000\nmean               33.738810   12.559534       6.858003\nstd               122.497742    7.955607      18.399328\nmin                 1.066667    0.032403       1.849218\n25%                 5.516667    7.566318       3.982177\n50%                 9.866667   10.766393       5.390044\n75%                18.812500   15.281973       7.223896\nmax              1428.316667   48.276585     555.555556","logger":"root","filename":"download_taxi_dag.py","lineno":166}
+{"timestamp":"2026-03-14T07:07:48.348766Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":218}
+{"timestamp":"2026-03-14T07:07:48.372739Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.373607Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-14T07:07:48.374383Z","level":"info","event":"Task operator:<Task(PythonOperator): transform_taxi_data>","logger":"task.stdout"}
